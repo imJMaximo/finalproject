@@ -1,0 +1,334 @@
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+/*--------------------------------
+BANNER
+---------------------------------*/
+
+.parallax {
+  /* The image used */
+  background-image: url('images/bgimg.jpg');
+
+  /* Full height */
+  height: 100%; 
+  display: table;
+  width: 100%;
+  height: 100%;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: table;
+    height: 100%;
+    text-align:center;
+    background-color: rgba(0,0,0,0.4);
+    animation: banner-in 2s ;
+}
+
+.banner__container {
+    display: table-cell;
+    margin-top: 15%;
+    margin-left: 5%;
+    vertical-align: middle;
+    float: left;
+}
+
+.banner__title {
+    font-size: 56px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    animation: opacity 3s;
+}
+
+.banner__text {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 18px;
+    animation: opacity 3s;
+}
+p{
+  color: white;
+  line-height:23px;
+  font-family: 'Nunito', sans-serif;
+}
+h1{
+  text-align: left;
+  left: 10%;
+}
+table{
+  margin-bottom: 8%;
+}
+.vidinfobox{
+    background-color: black;
+    border: 2px solid  #FFEBCD;
+    width: 300px;
+    height: 280px;
+    border-radius: 5px;
+}
+.aboutBP{
+    top: 2%;
+    margin-left: 3%;
+    border-radius: 5px;
+}
+.vidinfo{
+    top: 0%;
+    text-align: center;
+    height: 50px;
+    width: 290px;
+    font-family: 'Dosis', sans-serif;
+}
+.bpInfo{
+  padding-right: 10%;
+  padding-left: 10%;
+}
+body {
+    position: relative; 
+  }
+  #section1 {padding-top:5%;color: #D00E89; background-color:rgba(250, 0, 159, 0.5);}
+  #section2 {padding-top:5%;color: #D00E89; background-color: #484447;}
+  #section3 {padding-top:5%;color: #D00E89; background-color: rgba(250, 0, 159, 0.5);}
+  #section41 {padding-top:5%;color: #D00E89; background-color: #484447;}
+  #section42 {padding-top:5%;color: #D00E89; background-color: rgba(250, 0, 159, 0.5);}
+  
+ .btn {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    background-color: #daa37f;
+    border-radius: 0;
+    text-align: center;
+  text-transform: uppercase;
+
+
+}
+
+.btn--opacity {
+    animation: opacity 3s;
+}
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 900px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+  height: 48.7%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background: #222;
+  cursor: default;
+  height: 520px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: cornflowerblue;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: yellowgreen;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: tomato;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
+  }
+  .card {
+    height: 260px;
+  }
+}
+/*ANIMATIONS*/
+@-webkit-keyframes banner-in {
+  0% {  
+    background-color:rgba(0,0,0,1);
+  }
+  100% { 
+     background-color:rgba(0,0,0,0.5);
+  }
+}
+@-moz-keyframes banner-in {
+  0% {  
+    background-color:rgba(0,0,0,1);
+  }
+  100% { 
+     background-color:rgba(0,0,0,0.5);
+  }
+}
+@-o-keyframes banner-in {
+  0% {  
+    background-color:rgba(0,0,0,1);
+  }
+  100% { 
+     background-color:rgba(0,0,0,0.5);
+  }
+}
+@keyframes banner-in {
+  0% {  
+    background-color:rgba(0,0,0,1);
+  }
+  100% { 
+     background-color:rgba(0,0,0,0.5);
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
+}
+@-moz-keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
+}
+@-o-keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
+}
+@keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
+}
