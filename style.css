@@ -5,6 +5,16 @@ html, body{
   width: 100%;
   height: 100%;
 }
+h6{
+  color: white;
+  line-height:23px;
+  font-family: sans-serif;
+}
+h1{
+  text-align: left;
+  left: 10%;
+}
+
 /*--------------------------------
 BANNER
 ---------------------------------*/
@@ -14,10 +24,9 @@ BANNER
   background-image: url('images/bgimg.jpg');
 
   /* Full height */
-  height: 100%; 
-  display: table;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  
   
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -51,7 +60,7 @@ BANNER
     margin-top: 0;
     margin-bottom: 20px;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 500px;
     animation: opacity 3s;
 }
 
@@ -62,23 +71,65 @@ BANNER
     margin-bottom: 18px;
     animation: opacity 3s;
 }
-p{
-  color: white;
-  line-height:23px;
-  font-family: 'Nunito', sans-serif;
+/*ANIMATIONS (OPACITY) BANNER*/
+@-webkit-keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
 }
-h1{
-  text-align: left;
-  left: 10%;
+@-moz-keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
 }
-table{
-  margin-bottom: 8%;
+@-o-keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
 }
+@keyframes opacity {
+  0% {  
+    opacity:0;
+  }
+  100% { 
+     opacity:1;
+  }
+}
+
+
+/*---------------------------
+NAVIGATION BAR
+----------------------------*/
+body {
+    position: relative; 
+  }
+  #section1 {padding-top:3%; padding-bottom:3%; color: black; background-color:rgba(250, 0, 159, 0.5);}
+  #section2 {padding-top:3%; padding-bottom:5%; color: #D00E89; background-color: #484447;}
+  #section3 {padding-top:3%; padding-bottom:3%; color: black; background-color: rgba(250, 0, 159, 0.5);}
+  #section41 {padding-top:3%; padding-bottom:3%; color: #D00E89; background-color: #484447;}
+  #section42 {padding-top:3%; padding-bottom:3%; color: black; background-color: rgba(250, 0, 159, 0.5);}
+  
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+/*---------------------------
+SECTION 1 ABOUT
+---------------------------*/
 .vidinfobox{
     background-color: black;
     border: 2px solid  #FFEBCD;
-    width: 300px;
-    height: 280px;
+    width: 35%;
+    height: 33%;
     border-radius: 5px;
 }
 .aboutBP{
@@ -89,23 +140,14 @@ table{
 .vidinfo{
     top: 0%;
     text-align: center;
-    height: 50px;
-    width: 290px;
+    height: 100%;
+    width: 100%;
     font-family: 'Dosis', sans-serif;
 }
 .bpInfo{
   padding-right: 10%;
   padding-left: 10%;
 }
-body {
-    position: relative; 
-  }
-  #section1 {padding-top:5%;color: #D00E89; background-color:rgba(250, 0, 159, 0.5);}
-  #section2 {padding-top:5%;color: #D00E89; background-color: #484447;}
-  #section3 {padding-top:5%;color: #D00E89; background-color: rgba(250, 0, 159, 0.5);}
-  #section41 {padding-top:5%;color: #D00E89; background-color: #484447;}
-  #section42 {padding-top:5%;color: #D00E89; background-color: rgba(250, 0, 159, 0.5);}
-  
  .btn {
     color: #fff;
     padding: 10px 20px;
@@ -115,22 +157,24 @@ body {
     background-color: #daa37f;
     border-radius: 0;
     text-align: center;
-  text-transform: uppercase;
-
-
+    text-transform: uppercase;
 }
 
 .btn--opacity {
     animation: opacity 3s;
 }
+
+/*---------------------------
+SECTION 2 PROFILE
+---------------------------*/
 .cardBox {
   float: left;
   font-size: 1.2em;
-  margin: 1% 0 0 1%;
-  perspective: 900px;
+  margin: 0.5% 0 0 0.5%;
+  perspective: 990px;
   transition: all 0.3s ease 0s;
-  width: 23.7%;
-  height: 48.7%;
+  width: 24.5%;
+  height: 20%;
 }
 
 .cardBox:hover .card {
@@ -140,27 +184,26 @@ body {
 .card {
   background: #222;
   cursor: default;
-  height: 520px;
+  height: 450px;
   transform-style: preserve-3d;
   transition: transform 0.4s ease 0s;
   width: 100%;
   -webkit-animation: giro 1s 1;
   animation: giro 1s 1;
 }
-
-.card p {
-  margin-bottom: 1.8em;
+.card h3{
+  font-size: calc(16px+(30-16)*(100vw-400px)/(1000-400));
 }
-
+.card h6{
+    font-size: calc(10px+(20-10)*(100vw-400px)/(1000-400));
+}
 .card .front,
 .card .back {
   backface-visibility: hidden;
   box-sizing: border-box;
   color: white;
   display: block;
-  font-size: 1.2em;
   height: 100%;
-  padding: 0.8em;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -170,7 +213,6 @@ body {
   background: #fff;
   border-radius: 100%;
   color: #222;
-  font-size: 1.5em;
   line-height: 30px;
   padding: 0 7px 4px 6px;
 }
@@ -178,37 +220,8 @@ body {
 .card .back {
   transform: rotateY( 180deg);
 }
-
-.card .back a {
-  padding: 0.3em 0.5em;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 1px;
-  font-size: 0.9em;
-  transition: all 0.2s ease 0s;
-}
-
-.card .back a:hover {
-  background: #fff;
-  color: #333;
-  text-shadow: 0 0 1px #333;
-}
-
-.cardBox:nth-child(1) .card .back {
-  background: cornflowerblue;
-}
-
-.cardBox:nth-child(2) .card .back {
-  background: orange;
-}
-
-.cardBox:nth-child(3) .card .back {
-  background: yellowgreen;
-}
-
-.cardBox:nth-child(4) .card .back {
-  background: tomato;
+.cardBox .card .back {
+  background: #F087C9;
 }
 
 .cardBox:nth-child(2) .card {
@@ -226,6 +239,7 @@ body {
   animation: giro 2.5s 1;
 }
 
+/*ANIMATION (FLIP)- SECTION 2*/
 @-webkit-keyframes giro {
   from {
     transform: rotateY( 180deg);
@@ -266,69 +280,65 @@ body {
     height: 260px;
   }
 }
-/*ANIMATIONS*/
-@-webkit-keyframes banner-in {
-  0% {  
-    background-color:rgba(0,0,0,1);
-  }
-  100% { 
-     background-color:rgba(0,0,0,0.5);
-  }
+
+/*--------------------
+SECTION 3 AWARDS
+--------------------*/
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
-@-moz-keyframes banner-in {
-  0% {  
-    background-color:rgba(0,0,0,1);
-  }
-  100% { 
-     background-color:rgba(0,0,0,0.5);
-  }
+
+th, td {
+  text-align: left;
+  padding: 8px;
 }
-@-o-keyframes banner-in {
-  0% {  
-    background-color:rgba(0,0,0,1);
-  }
-  100% { 
-     background-color:rgba(0,0,0,0.5);
-  }
+
+tr{
+  background-color: black;
+  color: white;
 }
-@keyframes banner-in {
-  0% {  
-    background-color:rgba(0,0,0,1);
-  }
-  100% { 
-     background-color:rgba(0,0,0,0.5);
+
+th {
+  background-color: pink;
+  color: white;
+}
+
+/*--------------------
+  SECTION 4.1 GALLERY
+---------------------*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-top: 2%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
   }
 }
 
-@-webkit-keyframes opacity {
-  0% {  
-    opacity:0;
-  }
-  100% { 
-     opacity:1;
-  }
-}
-@-moz-keyframes opacity {
-  0% {  
-    opacity:0;
-  }
-  100% { 
-     opacity:1;
-  }
-}
-@-o-keyframes opacity {
-  0% {  
-    opacity:0;
-  }
-  100% { 
-     opacity:1;
-  }
-}
-@keyframes opacity {
-  0% {  
-    opacity:0;
-  }
-  100% { 
-     opacity:1;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
 }
